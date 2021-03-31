@@ -5,15 +5,15 @@ import com.TH.calculator.interfaces.BasicOperations;
 
 public class BasicCalculator implements BasicOperations {
 	
-	public double addition(double firstNumber, double secondNumber) {
+	public int addition(int firstNumber, int secondNumber) {
 		return firstNumber + secondNumber;
 	}
 	
-	public double subtraction(double firstNumber, double secondNumber) {
+	public int subtraction(int firstNumber, int secondNumber) {
 		return firstNumber - secondNumber;
 	}
 	
-	public double multiplication(double firstNumber, double secondNumber) {
+	public int multiplication(int firstNumber, int secondNumber) {
 		return firstNumber * secondNumber;
 	}
 	
