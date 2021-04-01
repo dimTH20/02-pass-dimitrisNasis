@@ -189,29 +189,28 @@ public class NumberMethodsTest {
 	@Test
 	public void testSquare() {
 		double tmpRndVal = 0.0;
+		double expResult = 0.0;
 		
 		//testing with negative numbers
 		for (int i = 0; i < 5; i++) {
 			tmpRndVal = doubleRandomNegativeNumbers();
-			assertTrue( (Math.sqrt(tmpRndVal) == ac.square(tmpRndVal))
-					|| (0.0 == ac.square(tmpRndVal)) );
+			expResult = Math.sqrt(tmpRndVal);
+			assertEquals(ac.square(tmpRndVal), expResult, 0);
 		}
 		
 		//testing with positive numbers
 		for (int i = 0; i < 5; i++) {
 			tmpRndVal = doubleRandomPositiveNumbers(); 
-			assertTrue((Math.sqrt(tmpRndVal) == ac.square(tmpRndVal)));
+			expResult = Math.sqrt(tmpRndVal);
+			assertEquals(ac.square(tmpRndVal), expResult, 0);
 		}
 		
 		//testing with zero
 		double zero = 0.0;
-		double inpResult = 0.0;
 		
 		for (int i = 0; i < 5; i++) {
-			inpResult = Math.sqrt(zero);
-			assertTrue( (inpResult == ac.square(zero)) 
-					||  (inpResult == zero)
-					||  (inpResult == -0.123456789) );
+			expResult = Math.sqrt(zero);
+			assertEquals(ac.square(zero), expResult, 0);
 		}
 		
 	}
@@ -222,32 +221,29 @@ public class NumberMethodsTest {
 	public void testExponentiation() {
 		double tmpRndVal = 0.0;
 		double tmpRndVal2 = 0.0;
-		double tmpResult = 0.0;
+		double expResult = 0.0;
 		
 		//testing with negative numbers
 		for (int i = 0; i < 5; i++) {
 			tmpRndVal = doubleRandomNegativeNumbers();
 			tmpRndVal2 = doubleRandomNegativeNumbers();
-			tmpResult = Math.pow(tmpRndVal, tmpRndVal2);
-			assertTrue( (tmpResult == ac.exponentiation(tmpRndVal, tmpRndVal2))
-					|| (0.0 == ac.exponentiation(tmpRndVal, tmpRndVal2)) );
+			expResult = Math.pow(tmpRndVal, tmpRndVal2);
+			assertEquals(ac.exponentiation(tmpRndVal, tmpRndVal2), expResult, 0);
 		}
 		
 		//testing with positive numbers
 		for (int i = 0; i < 5; i++) {
 			tmpRndVal = doubleRandomPositiveNumbers();
 			tmpRndVal2 = doubleRandomPositiveNumbers();
-			tmpResult = Math.pow(tmpRndVal, tmpRndVal2);
-			assertTrue((tmpResult == ac.exponentiation(tmpRndVal, tmpRndVal2)));
+			expResult = Math.pow(tmpRndVal, tmpRndVal2);
+			assertEquals(ac.exponentiation(tmpRndVal, tmpRndVal2), expResult, 0);
 		}
 		
 		//testing with zero
 		double zero = 0.0;
-		double inpResult = 0.0;
-		
 		for (int i = 0; i < 5; i++) {
-			inpResult = Math.pow(zero, zero);
-			assertTrue( (inpResult == ac.exponentiation(zero, zero)) );
+			expResult = Math.pow(zero, zero);
+			assertEquals(ac.exponentiation(zero, zero), expResult, 0);
 		}
 		
 	}

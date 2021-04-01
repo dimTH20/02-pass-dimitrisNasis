@@ -1,0 +1,5 @@
+com\TH\calculator\classes\AdvancedCalculator.class
+com\TH\calculator\Main\Main.class
+com\TH\calculator\classes\BasicCalculator.class
+com\TH\calculator\interfaces\AdvancedOperations.class
+com\TH\calculator\interfaces\BasicOperations.class
